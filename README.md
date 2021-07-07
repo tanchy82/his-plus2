@@ -25,10 +25,13 @@ Current base main version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 , 
 ## Explain base support service
 ### 1.1 plus2-config
    Config micro service management all micro service config application.yml file.
+   
    Config micro service current no register eureka service, only alone service.
 ### 1.2 plus2-eureka
    Eureka micro service start should specify start param '-Dspring.profiles.active=peer1', the param value rang 'peer1' or 'peer2' or 'peer3'
+   
    Development: specify 'peer1'
+   
    Production: should start multi micro service specify 'peer1'、'peer2'、'peer3', and set eureka.instance.hostname real value
 ### 1.3 plus2-core
    This is not real running micro service, only use common core code multiplex to other business micro service.
