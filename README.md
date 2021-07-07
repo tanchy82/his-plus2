@@ -1,5 +1,7 @@
 # his-plus2 
-Neusoft Cloud HIS miroc service by Spring Cloud
+Neusoft Cloud HIS miroc service by Spring Cloud.
+
+Current base main version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.3.6
 
 ## Overview
   This is HIS back end micro service code. System architecture base Spring Cloud.
