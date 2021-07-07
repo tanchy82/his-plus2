@@ -11,6 +11,8 @@
     <modules>
         <module>plus2-config</module>
         <module>plus2-eureka</module>
+        <module>plus2-core</module>
+        <module>plus2-org</module>
     </modules>
 
     <parent>
