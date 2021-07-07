@@ -3,16 +3,24 @@ Neusoft Cloud HIS miroc service by Spring Cloud
 
 ## Overview
   This is HIS back end micro service code. System architecture base Spring Cloud.
-  Should follow technology stack:
+  
+  Suggest but not forced the following technology stack:
+  
   1、spring-data-jpa
+  
   2、jackjson
+  
   3、logback
+  
   4、Hikari
+  
   5、redisson
+  
   6、Global uniform response format
+  
   7、Global uniform exception handler
 
-## 1、Explain base support service
+## Explain base support service
 ### 1.1 plus2-config
    Config micro service management all micro service config application.yml file.
    Config micro service current no register eureka service, only alone service.
@@ -24,6 +32,3 @@ Neusoft Cloud HIS miroc service by Spring Cloud
    This is not real running micro service, only use common core code multiplex to other business micro service.
 ### 1.4 plus2-org
    This micro service is check and use plus2-core code demo code by DDD.   
-
-
-##2、Explain business service coding rule
