@@ -1,0 +1,31 @@
+server:
+  undertow:
+    buffer-size: 1024
+    direct-buffers: true
+  port: 7777
+spring:
+  application:
+    name: security-server
+  jpa:
+    show-sql: true
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+      maximum-pool-size: 8
+      minimum-idle: 4
+      idle-timeout: 300000
+      validation-timeout: 5000
+      max-lifetime: 1200000
+      initialization-fail-timeout: 5000
+    url: jdbc:mysql://huaweioldtan:13306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: oldtan
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

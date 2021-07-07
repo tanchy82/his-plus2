@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/config
+
+server:
+  port: 8888
+  undertow:
+    accesslog:
+      enabled: false
+  compression:
+    enabled: true
+  http2:
+    enabled: true
