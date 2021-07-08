@@ -1,7 +1,7 @@
 # his-plus2 
 Neusoft Cloud HIS miroc service by Spring Cloud.
 
-About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.6, lombok 1.18.10
+About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.6, lombok 1.18.20
 
 ## Overview
   This is HIS back end micro service code. System architecture base Spring Cloud.
@@ -27,6 +27,8 @@ About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.
    Config micro service management all micro service config application.yml file.
    
    Config micro service current no register eureka service, only alone service.
+   
+   Global uniform log handler, to see /config/application-log.yml, other micro service will included.
 ### 1.2 plus2-eureka
    Eureka micro service start should specify start param '-Dspring.profiles.active=peer1', the param value rang 'peer1' or 'peer2' or 'peer3'
    
@@ -35,5 +37,10 @@ About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.
    Production: should start multi micro service specify 'peer1'、'peer2'、'peer3', and set eureka.instance.hostname real value
 ### 1.3 plus2-core
    This is not real running micro service, only use common core code multiplex to other business micro service.
+   
+   Include:
+   
+     1、resultpack: handle global uniform response and exception
+     2、scala util: integration common trait, e.g.: logger
 ### 1.4 plus2-org
    This micro service is check and use plus2-core code demo code by DDD.   

@@ -4,8 +4,10 @@ server:
     direct-buffers: true
   port: 7777
 spring:
+  profiles:
+    include: log
   application:
-    name: security-server
+    name: org-server
   jpa:
     show-sql: true
   datasource:
