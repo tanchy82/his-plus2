@@ -1,9 +1,0 @@
-logging:
-  file:
-    path: /home/tanchy/software/IdeaProjects/his-plus2/hisPlus2Logs/${spring.application.name}-log
-  logback:
-    rollingpolicy:
-      max-file-size: 10MB
-      max-history: 7
-  level:
-    root: info

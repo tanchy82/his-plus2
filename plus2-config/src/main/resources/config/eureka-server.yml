@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    include: log
   application:
     name: eureka-server
 server:

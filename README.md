@@ -21,6 +21,8 @@ About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.
   6、Global uniform response format
   
   7、Global uniform exception handler
+  
+  8、springfox-swagger3.0
 
 ## Explain base support service
 ### 1.1 plus2-config
@@ -42,5 +44,7 @@ About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.
    
      1、resultpack: handle global uniform response and exception
      2、scala util: integration common trait, e.g.: logger
+     3、Swagger: integration io.springfox-swagger3.0, echa micro service will produce each different swagger title. 
+        Call url: http://{spring.application.name}:{server.port}/swagger-ui/index.html
 ### 1.4 plus2-org
    This micro service is check and use plus2-core code demo code by DDD.   

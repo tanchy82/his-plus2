@@ -1,0 +1,48 @@
+
+##############  undertow  ############################
+server:
+  undertow:
+    buffer-size: 1024
+    direct-buffers: true
+
+##############  logback  ############################
+logging:
+  file:
+    path: /home/tanchy/software/IdeaProjects/his-plus2/hisPlus2Logs/${spring.application.name}-log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7
+  level:
+    root: info
+
+############# swagger  #############################
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+
+############# hikari  #############################
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+      maximum-pool-size: 8
+      minimum-idle: 4
+      idle-timeout: 300000
+      validation-timeout: 5000
+      max-lifetime: 1200000
+      initialization-fail-timeout: 5000
+
+############# eureka client  #############################
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

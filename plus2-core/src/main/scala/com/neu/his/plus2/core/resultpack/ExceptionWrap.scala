@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.{ControllerAdvice, ExceptionHandl
 
 import scala.beans.BeanProperty
 
+/**
+  * @author tanchy
+  *   Unified format wrap exception json message.
+  */
 @ControllerAdvice
 class ExceptionWrap {
 
