@@ -39,6 +39,19 @@ spring:
       max-lifetime: 1200000
       initialization-fail-timeout: 5000
 
+############# redisson cache  #############################
+  redis:
+    host: huaweioldtan
+    port: 16666
+    timeout: 3000
+    connect-timeout: 30000
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000
+      key-prefix: his-plus2
+      cache-null-values: false
+
 ############# eureka client  #############################
 eureka:
   client:

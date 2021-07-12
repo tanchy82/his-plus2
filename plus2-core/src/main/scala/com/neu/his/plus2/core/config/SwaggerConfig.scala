@@ -1,6 +1,7 @@
 package com.neu.his.plus2.core.config
 
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.cache.annotation.EnableCaching
 import org.springframework.context.annotation.{Bean, Configuration}
 import springfox.documentation.builders.{ApiInfoBuilder, PathSelectors, RequestHandlerSelectors}
 import springfox.documentation.oas.annotations.EnableOpenApi
@@ -12,6 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket
   */
 @Configuration
 @EnableOpenApi
+@EnableCaching
 class SwaggerConfig {
 
   @Value("${spring.application.name}") val applicationName:String = null

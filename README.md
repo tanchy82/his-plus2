@@ -44,7 +44,11 @@ About version: Spring Cloud 2020.0.3 , Spring Boot 2.4.6 , JDK1.8 ,  scala 2.13.
    
      1、resultpack: handle global uniform response and exception
      2、scala util: integration common trait, e.g.: logger
-     3、Swagger: integration io.springfox-swagger3.0, echa micro service will produce each different swagger title. 
+     3、Swagger: integration io.springfox-swagger3.0, each micro service will produce each different swagger title. 
         Call url: http://{spring.application.name}:{server.port}/swagger-ui/index.html
+     4、Redisson: integration redisson-spring-boot-starter, following three use model and more to see: https://github.com/redisson/redisson.git
+        4.1 Use @Cacheable @CacheEvict @CachePut @Caching, to see https://spring.io/guides/gs/caching/ https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/cache.html
+        4.2 @Autowired use RedisTemplate, to see https://spring.io/projects/spring-data-redis
+        4.3 @Autowired use RedissonClient, to see https://github.com/redisson/redisson
 ### 1.4 plus2-org
    This micro service is check and use plus2-core code demo code by DDD.   

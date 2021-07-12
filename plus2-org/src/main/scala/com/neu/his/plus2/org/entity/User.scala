@@ -4,6 +4,7 @@ import java.time.LocalDateTime
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.{Entity, GeneratedValue, GenerationType, Id, Table}
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.data.repository.PagingAndSortingRepository
 import org.springframework.stereotype.Repository
 
@@ -25,5 +26,7 @@ case class User() {
 
 @Repository
 trait UserRepository extends PagingAndSortingRepository[User,Long] {
+
+  @Cacheable(value = Array("user"), key = "#a", sync = true)
   def findByAccount(a:String): Option[User]
 }

@@ -12,4 +12,12 @@ class OrgService {
     UserDo(User()).queryUser()
   }
 
+  def queryOne(a: String): User = {
+    UserDo({
+      val u = User()
+      u.account = a
+      u
+    }).queryOneByAccount.getOrElse(null)
+  }
+
 }

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore
 import com.neu.his.plus2.core.util.ApplicationContextUtil
 import com.neu.his.plus2.org.entity.{Role, RoleRepository, User, UserRepository}
 import org.springframework.data.domain.{Page, PageRequest, Pageable}
+import springfox.documentation.annotations.Cacheable
 
 /**
   * @author tanchy
